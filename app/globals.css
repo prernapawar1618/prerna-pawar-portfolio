@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark Theme Default */
+  --background: #000000;
+  --foreground: #ffffff;
+
+  /* Custom Colors */
+  --accent: #3b82f6;
+  --muted: #171717;
+  --muted-foreground: #a3a3a3;
+  --border: #262626;
+
+  /* Aurora Colors */
+  --aurora-1: #000000;
+  --aurora-2: #1e1b4b;
+  /* dark indigo */
+  --aurora-3: #4c1d95;
+  /* violet */
+  --aurora-4: #0f172a;
+  /* slate */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --animate-aurora: aurora 60s linear infinite;
+
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
+    }
+
+    to {
+      background-position: 350% 50%, 350% 50%;
+    }
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Aurora Background Utility */
+.aurora-bg {
+  background-image:
+    radial-gradient(at 100% 0%, hsla(250, 100%, 20%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(220, 100%, 20%, 1) 0px, transparent 50%);
+  background-attachment: fixed;
+}
