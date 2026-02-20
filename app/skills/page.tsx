@@ -12,7 +12,6 @@ const skills: SkillItem[] = [
     { name: "CSS3 / SCSS", category: "Frontend" },
     { name: "JavaScript", category: "Frontend" },
     { name: "React.js", category: "Frontend" },
-    { name: "Next.js", category: "Frontend" },
     { name: "Tailwind CSS", category: "Frontend" },
     { name: "Node.js", category: "Backend" },
     { name: "Python", category: "Backend" },
@@ -23,7 +22,6 @@ const skills: SkillItem[] = [
     { name: "Figma", category: "Tools" },
     { name: "Adobe XD", category: "Tools" },
     { name: "Canva", category: "Tools" },
-    { name: "Debugging", category: "Tools" },
 ];
 
 export default function SkillsPage() {
